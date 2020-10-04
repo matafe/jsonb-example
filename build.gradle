@@ -1,0 +1,37 @@
+plugins {
+    id 'java-library'
+    id 'eclipse'
+}
+
+repositories {
+    jcenter()
+}
+
+compileJava {
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+}
+
+test {
+    // Unit Platform
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }  
+}
+
+dependencies {
+    // JSR 367: Java API for JSON Binding (JSON-B)
+    api 'javax.json.bind:javax.json.bind-api:1.0'
+
+    // Eclipse Yasson (RI)
+    implementation 'org.eclipse:yasson:1.0.8'
+    implementation 'org.glassfish:javax.json:1.1'
+    
+    // Apache Johnzon Implementation -->
+    //implementation 'org.apache.johnzon:johnzon-jsonb:1.2.8'
+    //implementation 'org.apache.geronimo.specs:geronimo-json_1.1_spec:1.4'    
+
+    testImplementation(platform('org.junit:junit-bom:5.7.0'))
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}

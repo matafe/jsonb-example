@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.matafe</groupId>
+	<artifactId>jsonb-example</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>jsonb-example</name>
+	<description>JSR 367: Java API for JSON Binding (JSON-B)</description>
+
+	<properties>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+	</properties>
+
+	<dependencies>
+		<!-- JSR 367: Java API for JSON Binding (JSON-B) -->
+		<dependency>
+			<groupId>javax.json.bind</groupId>
+			<artifactId>javax.json.bind-api</artifactId>
+			<version>1.0</version>
+		</dependency>
+		
+		<!-- Eclipse Yasson (RI) -->
+		<dependency>
+			<groupId>org.eclipse</groupId>
+			<artifactId>yasson</artifactId>
+			<version>1.0.8</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish</groupId>
+			<artifactId>javax.json</artifactId>
+			<version>1.1</version>
+		</dependency>
+
+		<!-- Apache Johnzon Implementation -->
+		<!-- 
+		<dependency>
+			<groupId>org.apache.johnzon</groupId>
+			<artifactId>johnzon-jsonb</artifactId>
+			<version>1.2.8</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-json_1.1_spec</artifactId>
+			<version>1.4</version>
+		</dependency>
+ 		 -->
+
+		<!-- JUnit 5 for testing -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.7.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.7.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-params</artifactId>
+			<version>5.7.0</version>
+			<scope>test</scope>
+		</dependency>
+		
+	</dependencies>
+</project>
